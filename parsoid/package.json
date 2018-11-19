@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parsoid-jsapi": "0.0.1"
+    "parsoid-jsapi": "0.0.1",
+    "pegjs": "^0.10.0"
   }
 }
