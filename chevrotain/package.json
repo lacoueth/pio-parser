@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chevrotain": "^4.1.0"
+  },
+  "devDependencies": {
     "lodash": "^4.17.11"
   }
 }

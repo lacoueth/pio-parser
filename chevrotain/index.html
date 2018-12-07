@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        font-size: 18px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      #area {
+        font-size: 18px;
+        height: 100%;
+        width: 50%;
+        background: #fefefe;
+        padding: 14px;
+      }
+      #print {
+        width: 49%;
+        height: 100%;
+        padding: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea name="area" id="area"></textarea>
+    <div id="print"></div>
+
+    <script type="module" src="./step3_actions/main.js"></script>
+
+    <script>
+      document.getElementById("area").addEventListener("keyup", res => {
+        console.log(res);
+
+        // const toAstEmbedded = require("./embed").toAst;
+        const area = document.getElementById("area");
+        const print = document.getElementById("print");
+
+        let astFromEmbedded = Parse(area.value);
+
+        print.innerHTML = astFromEmbedded;
+      });
+    </script>
+  </body>
+</html>

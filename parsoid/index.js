@@ -53,7 +53,8 @@ async function parseTemplate(template) {
             result.params[param.name] = await param.value.toWikitext();
         } else {
             const content = param.value.filterTemplates({ recursive: false });
-            const text = param.value.filterText();
+            const text = param.value.filterText({ recursive: false });
+
             console.log(await Promise.all(
                 text.map(async e => await e.value)
             ));

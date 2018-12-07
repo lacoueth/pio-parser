@@ -99,7 +99,7 @@ function jsonExample() {
         $.MANY({
           DEF: () => {
             $.CONSUME(Comma);
-            _.assign(obj, $.SUBRULE($.templateParam));
+            Object.assign(obj, $.SUBRULE($.templateParam));
           }
         });
 
@@ -162,7 +162,7 @@ function jsonExample() {
 const real_w_quotes = require("../input-tests").real_w_text_w_quotes;
 // let inputText = real_w_quotes;
 let inputText = `
-"ononon" {{ ini |"o,o," {{iencin | "inini"}} "inini" }} "rinvr vro"
+"ononon" {{ ini | encien="ini" |"o,o," {{iencin | "inini"}} "inini" }} "rinvr vro"
 `;
 
 const build = jsonExample();
